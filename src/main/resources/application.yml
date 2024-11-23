@@ -15,7 +15,7 @@ t1:
       poll-timeout: 1000
 
     transaction:
-      time-window: 6000000
+      time-window: 60000
       max-transactions: 5
 
 spring:
