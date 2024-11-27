@@ -1,0 +1,28 @@
+t1:
+  scan-path: ru.t1.java.demo
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id-transaction-info: t1-demo-transaction-info
+
+
+      max.poll.records: 10
+    producer:
+      enable: true
+    topic:
+      client_transactions-info: t1_demo_client_transactions-info
+    listener:
+      poll-timeout: 1000
+
+    transaction:
+      time-window: 60000
+      max-transactions: 5
+
+spring:
+  docker:
+    compose:
+      enabled=false:
+
+server:
+  port: 8090
+
